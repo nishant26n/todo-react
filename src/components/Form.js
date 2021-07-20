@@ -8,11 +8,15 @@ const Form = ({ inputText, setInputText, todos, setTodos, setStatus }) => {
 
   const submitTodosHandler = (e) => {
     e.preventDefault();
-    setTodos([
-      ...todos,
-      { Text: inputText, completed: false, id: Math.random() * 1000 },
-    ]);
-    setInputText("");
+    if (inputText === "") {
+      setInputText("");
+    } else {
+      setTodos([
+        ...todos,
+        { Text: inputText, completed: false, id: Math.random() * 1000 },
+      ]);
+      setInputText("");
+    }
   };
 
   const statusHandler = (e) => {
