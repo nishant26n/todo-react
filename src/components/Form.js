@@ -29,6 +29,7 @@ const Form = ({ inputText, setInputText, todos, setTodos, setStatus }) => {
         <input
           value={inputText}
           onChange={inputTextHandler}
+          placeholder="add a todo to get started"
           type="text"
           className="todo-input"
         />

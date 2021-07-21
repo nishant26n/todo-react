@@ -49,7 +49,7 @@ function App() {
 
   return (
     <div className="App">
-      <header>My Todo List</header>
+      <header>Todo</header>
       <Form
         inputText={inputText}
         todos={todos}
